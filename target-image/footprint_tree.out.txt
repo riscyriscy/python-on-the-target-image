@@ -1,0 +1,8 @@
+== x86_64
+as installed:        122.2 MiB (stdlib 40.8 MiB, executable 30.7 MiB)
+without bytecode:    105.9 MiB
+after removing them: 51.7 MiB (stdlib 19.9 MiB, lib-dynload 2.3 MiB)
+== aarch64
+as installed:        92.0 MiB (stdlib 28.5 MiB, executable 22.0 MiB)
+without bytecode:    87.3 MiB
+after removing them: 42.4 MiB (stdlib 19.2 MiB, lib-dynload 1.6 MiB)

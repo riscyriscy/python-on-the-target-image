@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "configure",
+            "type": "shell",
+            "command": "cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_EXECUTABLE=${workspaceFolder}/.venv/bin/python",
+            "problemMatcher": []
+        },
+        {
+            "label": "build extension",
+            "type": "shell",
+            "command": "cmake --build build",
+            "dependsOn": ["configure"],
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "uv run pytest -q",
+            "dependsOn": ["build extension"],
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "wait for debugger",
+            "type": "shell",
+            "command": "uv run --with debugpy python -m debugpy --listen 5678 --wait-for-client -m frametool --selftest",
+            "isBackground": true,
+            "dependsOn": ["build extension"],
+            "problemMatcher": {
+                "pattern": { "regexp": "^$" },
+                "background": { "activeOnStart": true, "beginsPattern": "^$", "endsPattern": "^$" }
+            }
+        }
+    ]
+}

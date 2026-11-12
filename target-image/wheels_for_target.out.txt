@@ -1,0 +1,16 @@
+== pip, glibc 2.17 (manylinux2014)
+numpy-2.2.6-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+pyserial-3.5-py2.py3-none-any.whl
+== pip, glibc 2.28
+numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
+== pip, musl (Alpine)
+numpy-2.5.4-cp312-cp312-musllinux_1_2_aarch64.whl
+== pip, 32-bit Arm, numpy
+ERROR: Could not find a version that satisfies the requirement numpy (from versions: none)
+ERROR: No matching distribution found for numpy
+== pip, 32-bit Arm, pyserial (pure Python)
+pyserial-3.5-py2.py3-none-any.whl
+== uv, glibc 2.17, source builds allowed
+ + numpy==2.5.4
+== uv, glibc 2.17, wheels only
+ + numpy==2.2.6

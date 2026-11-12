@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]          # a backend that every Yocto release has as a native recipe
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rig-service"
+version = "1.0"
+description = "Telemetry collector for the test rig: reports to systemd and stops pinging when its loop stops"
+requires-python = ">=3.12"
+dependencies = []                      # frametool is a separate package, with its own recipe on the image
+
+[project.scripts]
+rig-service = "rig_service.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.mypy]
+strict = true
+mypy_path = "src"

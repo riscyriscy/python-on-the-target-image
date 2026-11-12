@@ -1,0 +1,40 @@
+[build-system]
+requires = ["scikit-build-core>=0.11"]       # PEP 517 backend that calls CMake
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "frametool"
+version = "1.2.0"
+description = "Host tool for the framed telemetry link used by the example firmware"
+requires-python = ">=3.12"
+dependencies = []                              # the tool itself needs only the standard library
+
+[project.optional-dependencies]
+serial = ["pyserial>=3.5"]                     # pip install "frametool[serial]"
+
+[project.scripts]
+frametool = "frametool.__main__:main"          # installs a 'frametool' command
+
+[dependency-groups]                            # PEP 735: dev-only tools, not shipped
+dev = [
+    "pytest>=8", "hypothesis>=6.100", "pyserial>=3.5", "types-pyserial>=3.5",
+    "ruff>=0.6", "mypy>=1.11",
+]
+
+[tool.scikit-build]
+cmake.version = ">=3.21"
+wheel.packages = ["src/frametool"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]     # pycodestyle, pyflakes, isort, pyupgrade, bugbear
+
+[tool.mypy]
+strict = true
+mypy_path = "src"

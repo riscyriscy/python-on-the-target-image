@@ -1,0 +1,12 @@
+python3-core             4264 KiB
+python3-netclient         603 KiB
+python3-io                474 KiB
+python3-email             436 KiB
+python3-compression       245 KiB
+python3-crypt              90 KiB
+python3-datetime           49 KiB
+python3-shell              36 KiB
+python3-math               34 KiB
+python3-mime               14 KiB
+python3-stringold          12 KiB
+11 of 61 packages, 6257 KiB of 12570 KiB

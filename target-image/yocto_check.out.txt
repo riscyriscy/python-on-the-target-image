@@ -1,0 +1,26 @@
+== parse every recipe of every layer
+bitbake -p exit status 0
+== the recipes of meta-rig
+
+python3-frametool:
+  meta-rig             1.2.0
+python3-rig-service:
+  meta-rig             1.0
+== resolve the dependencies of python3-rig-service
+bitbake -g exit status 0, 144 recipes in the build list
+python3-setuptools-native
+python3-build-native
+python3-installer-native
+python3-frametool
+== python3-rig-service, DEPENDS (build tools and Python only)
+python3 python3-build-native python3-installer-native python3-native
+python3-setuptools-native python3-wheel-native
+== python3-rig-service, RDEPENDS
+python3-core python3-frametool python3-io
+== python3-frametool, DEPENDS (build tools and Python only)
+cmake-native ninja-native python3 python3-native
+== python3-frametool, EXTRA_OECMAKE
+ -DPython_INCLUDE_DIR=<recipe-sysroot>/usr/include/python3.12
+== do_unpack
+python3-frametool-1.2.0-r0: task do_unpack: Succeeded
+python3-rig-service-1.0-r0: task do_unpack: Succeeded

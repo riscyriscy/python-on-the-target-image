@@ -1,0 +1,20 @@
+== do_compile
+Successfully built rig_service-1.0-py3-none-any.whl
+== do_install
+usr/bin/rig-service
+usr/lib/python3.12/site-packages/rig_service-1.0.dist-info/METADATA
+usr/lib/python3.12/site-packages/rig_service-1.0.dist-info/RECORD
+usr/lib/python3.12/site-packages/rig_service-1.0.dist-info/WHEEL
+usr/lib/python3.12/site-packages/rig_service-1.0.dist-info/entry_points.txt
+usr/lib/python3.12/site-packages/rig_service-1.0.dist-info/top_level.txt
+usr/lib/python3.12/site-packages/rig_service/__init__.py
+usr/lib/python3.12/site-packages/rig_service/__main__.py
+usr/lib/python3.12/site-packages/rig_service/__pycache__/__init__.cpython-312.pyc
+usr/lib/python3.12/site-packages/rig_service/__pycache__/__main__.cpython-312.pyc
+usr/lib/python3.12/site-packages/rig_service/__pycache__/service.cpython-312.pyc
+usr/lib/python3.12/site-packages/rig_service/py.typed
+usr/lib/python3.12/site-packages/rig_service/service.py
+== the installed command
+#!/usr/bin/env python3
+== the unit that do_install:append adds
+systemd-analyze verify: no messages, exit status 0

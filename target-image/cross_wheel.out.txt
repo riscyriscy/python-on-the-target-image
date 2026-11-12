@@ -1,0 +1,8 @@
+Successfully built frametool-1.2.0-cp314-cp314-linux_aarch64.whl
+frametool-1.2.0-cp314-cp314-linux_aarch64.whl
+  frametool/_crc16.so
+ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked
+Root-Is-Purelib: false
+Tag: cp314-cp314-linux_aarch64
+aarch64 frametool/_crc16.so
+27 passed in 21.86s

@@ -1,0 +1,12 @@
+interpreter alone:           11.8 ms
+without site (-S):            9.0 ms
+isolated, no site (-I -S):    8.6 ms
+import json:               20.2 ms
+import struct:             11.5 ms
+import socket:             16.4 ms
+import threading:          12.0 ms
+import ctypes:             16.2 ms
+import sqlite3:            15.9 ms
+import ssl:                24.0 ms
+import asyncio:            66.1 ms
+modules loaded at start:    33 with site, 21 without

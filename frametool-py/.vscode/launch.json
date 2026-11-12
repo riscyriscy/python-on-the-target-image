@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: self-test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "frametool",
+            "args": ["--selftest"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: attach to debugpy",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": { "host": "localhost", "port": 5678 },
+            "preLaunchTask": "wait for debugger"
+        },
+        {
+            "name": "C: attach to the interpreter",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/.venv/bin/python",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                { "description": "Pretty printing", "text": "-enable-pretty-printing", "ignoreFailures": true }
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Python and C",
+            "configurations": ["Python: attach to debugpy", "C: attach to the interpreter"]
+        }
+    ]
+}

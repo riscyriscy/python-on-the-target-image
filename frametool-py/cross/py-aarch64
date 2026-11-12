@@ -1,0 +1,3 @@
+#!/bin/sh
+# Runs the target's interpreter on the host through qemu user-mode emulation
+exec qemu-aarch64 -L /usr/aarch64-linux-gnu "$AARCH64_PYTHON_HOME/bin/python3.14" "$@"

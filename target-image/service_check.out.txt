@@ -1,0 +1,9 @@
+== tests
+3 passed in 2.74s
+== run, then SIGTERM after 1.5 s
+frames 10 crc16 0x258a
+frames 20 crc16 0xd675
+frames 30 crc16 0x773f
+exit status 0
+== the unit
+no messages, exit status 0
